@@ -1,0 +1,26 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
+
+  Exclude:
+    - 'bin/**/*'
+    - 'db/migrate/**/*'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+
+Documentation:
+  Enabled: false
+
+RSpec/FactoryBot/CreateList:
+  Description: Checks for create_list usage.
+  Enabled: true
+  EnforcedStyle: create_list
+  SupportedStyles:
+    - create_list
+    - n_times
