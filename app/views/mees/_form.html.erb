@@ -2,8 +2,8 @@
   <%= form_with(model: mee, local: true) do |f| %>
     <h2>問題解決フォーマット（精度アップ）</h2>
     <div> 必須
-      <%= f.text_field :q_a%>月
-        <%= f.text_field :q_b%>日　</div>
+      <%= f.text_field :q_a,required: true %>月
+        <%= f.text_field :q_b,required: true %>日　</div>
     <input id="acd-check1" class="acd-check" type="checkbox"> <label class="acd-label" for="acd-check1">【問題の箇所】</label>
     <div class="acd-content">
       <div class="box1">
@@ -21,13 +21,13 @@
     <div class="acd-content">
       <div class="box1">
         <p>■ エラー画面のスクリーンショット <br>スクリーンショットを貼る</p>
-        <%= f.text_area :q_2, placeholder: "text",class:"q_a" %>
+        <%= f.text_area :q_3, placeholder: "text",class:"q_a" %>
       </div>
     </div>
     <input id="acd-check4" class="acd-check" type="checkbox"> <label class="acd-label" for="acd-check4">■ 問題に関するターミナルやコンソールのスクリーンショット</label>
     <div class="acd-content">
       <div class="box1"> スクリーンショットを貼る
-        <%= f.text_area :q_3, placeholder: "text",class:"q_a" %>
+        <%= f.text_area :q_4, placeholder: "text",class:"q_a" %>
       </div>
     </div>
     <input id="acd-check5" class="acd-check" type="checkbox"> <label class="acd-label" for="acd-check5">■ 解決したいこと</label>

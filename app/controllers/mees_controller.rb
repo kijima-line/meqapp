@@ -40,8 +40,7 @@ class MeesController < ApplicationController
   
     private
     def mee_params
-      params.permit(:q_a, :q_b, :q_1, :q_2, :q_3, :q_4, :q_5, :q_6, :q_7)
-      #.merge(user_id: current_user.id)
+      params.require(:mee).permit(:q_a, :q_b, :q_1, :q_2, :q_3, :q_4, :q_5, :q_6, :q_7).merge(user_id: current_user.id)
     end
   end
   
