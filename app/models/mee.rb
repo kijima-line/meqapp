@@ -1,0 +1,2 @@
+class Mee < ApplicationRecord
+end
