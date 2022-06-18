@@ -70,3 +70,9 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
+
+gem 'devise'
+#gem 'rspec-rails', '~> 4.0.0'
+gem 'pry-rails'
+gem 'faker'
+gem 'sassc-rails'
