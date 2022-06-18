@@ -1,0 +1,34 @@
+  
+<% @mees.each do |mee| %>
+<div class="point-box">
+
+<div class="item-list">
+<%=link_to '詳しく見る' ,mee_path(mee.id),method: :get ,class:"item"%>
+<%=link_to '編集する', edit_mee_path(mee.id) ,method: :get,class:"item1"%>
+<%=button_to '削除する', mee_path(mee) ,method: :delete ,class:"item1"%>
+
+</div>
+<%#=ログイン情報%>
+<div class="point-title"><%= mee.q_a%>月<%= mee.q_b%>日</div>
+<h2>【問題の箇所】</h2>
+<div class="box1"> 
+<%= mee.q_1 %><%#=タイトルのみ必須%><br></div>
+<h2>【問題の内容】</h2>
+---------実装予定--------
+
+<br>
+#タグ（多対多）<br>
+#カテゴリー（activehash）<br>
+#解決済み(いいね機能かチェックボックス)<br>
+-----------------------
+  
+</div>
+  <% end %>
+
+
+<%#= mee.q_2 %>
+<%#= mee.q_3 %>
+<%#= mee.q_4 %>
+<%#= mee.q_5 %>
+<%#= mee.q_6 %>
+<%#= mee.q_7 %>
