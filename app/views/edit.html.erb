@@ -1,0 +1,66 @@
+<div style="background:skyblue;">
+ <%= form_with(model: @mee, local: true) do |f| %>
+  <h2>問題解決フォーマット（精度アップ）</h2>
+  
+<%= f.text_field :q_a%>月<%= f.text_field :q_b%>日<%#= f.time_field :created_at %>
+
+
+
+<h2>【問題の箇所】</h2>
+<div class="box1"> 
+<p></p>
+<%= f.text_area :q_1, placeholder: "（例）最終課題サーバーサイド",class:"q_a" %></div>
+
+<h2>【問題の内容】</h2>
+<div class="box1"> 
+<p>■ エラー画面のスクリーンショット
+<br>スクリーンショットを貼る</p>
+<%= f.text_area :q_2, placeholder: "text",class:"q_a" %></div>
+
+<h2>■ 問題に関するVScodeのファイル全体のスクリーンショット</h2>
+<div class="box1"> 
+スクリーンショットを貼る<%= f.text_area :q_3, placeholder: "text",class:"q_a" %>
+</div>
+
+<h2>■ 問題に関するターミナルやコンソールのスクリーンショット</h2>
+<div class="box1"> 
+スクリーンショットを貼る<%= f.text_area :q_4, placeholder: "text",class:"q_a" %>
+</div>
+
+<h2>■ 解決したいこと</h2>
+<div class="box1"> 
+<%= f.text_area :q_5, placeholder: "（例）クレジットカードを用いた購入機能を実装中。
+カード情報のトークン生成はできているが、トークン情報がパラメーターとして取れない。",class:"q_a" %>
+</div>
+
+<h2>■ 調べた内容とそこから立てた仮説</h2>
+<div class="box1"> 
+<%= f.text_area :q_6, placeholder: "（例）公式リファレンスを参考に購入機能を実装してみたが、
+トークンが決済処理の値として取れずに決済ができない。
+トークンの生成までは出来ているので、JSからパラメーターが送れていないか、
+コントローラーでの受け取りができていないのではないか？また、トークンは受け取れているが、
+秘密鍵の設定ミスではないかと疑い、デバックを行ったが秘密鍵の値は間違ってはいなかった",class:"q_a" %>
+</div>
+
+<h2>■ 仮説を元に行った作業内容</h2>
+<div class="box1"> 
+<%= f.text_area :q_7, placeholder: "（例）コントローラーにbinding.pryを設け処理をとめた。
+何が受け取れているのかを確認したところ、トークンの受け取りは確認できなかった。
+JSからパラメーターが送られていないのか確認しようとしたが、適切に確認できているのか
+分からなかった。",class:"q_a" %></div>
+<h2>カテゴリー</h2>
+<div class="box1"> 
+<ol>
+<li>実装予定</li>
+<li>未分類</li>
+<li>解決｜未解決</li>
+<li>フロントエンド</li>
+<li>バックエンド</li>
+</ol>
+
+</div>
+<h2>タグ</h2>
+<div class="box1"> 
+</div>
+       <%= f.submit "SEND" %>
+    <% end %> </div>
