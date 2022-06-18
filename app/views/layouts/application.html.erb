@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title>Meq</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+      <div class="flexbox">
+          <div class="list">
+         <%= link_to "ホーム", root_path %>
+    <ol>
+        <li> 実装予定</li>
+        <li><%= link_to "作成する",new_mee_path %></li>
+        <li>未解決</li>
+        <li>解決</li>
+        <li>カテゴリー</li>
+        <li>カレンダー</li>
+        <li>タグ</li>
+    </ol>
+</div>
+        <article class="main">
+            <!-- カラム 2 ここから -->
+            <%= yield %>
+                <!-- カラム 2 ここまで -->
+        </article>
+        </div>
   </body>
 </html>
