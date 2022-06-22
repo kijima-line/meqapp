@@ -1,6 +1,7 @@
 class CreateMees < ActiveRecord::Migration[6.1]
   def change
     create_table :mees do |t|
+      t.string :title
       t.string :q_1
       t.string :q_2
       t.string :q_3
