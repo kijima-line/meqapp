@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   devise_for :users
 root to: 'mees#index'
 resources :mees
-resources :users
+resources :users, only: :create
 end
