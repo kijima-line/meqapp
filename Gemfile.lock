@@ -144,7 +144,7 @@ GEM
     method_source (1.0.0)
     mini_magick (4.11.0)
     mini_mime (1.1.2)
-    minitest (5.16.0)
+    minitest (5.16.1)
     msgpack (1.5.2)
     mysql2 (0.5.4)
     net-imap (0.2.3)
@@ -227,6 +227,7 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    rmagick (4.2.5)
     rspec-core (3.11.0)
       rspec-support (~> 3.11.0)
     rspec-expectations (3.11.0)
@@ -353,6 +354,7 @@ DEPENDENCIES
   pry-stack_explorer
   puma
   rails
+  rmagick
   rspec-rails
   rubocop
   rubocop-performance

@@ -18,6 +18,7 @@
  <h2>■ 問題に関するVScodeのファイル全体のスクリーンショット</h2>
 <div class="box1"> 
 スクリーンショットを貼る<%= @mee.q_3 %>
+<%= image_tag @mee.image.variant(resize: '500x500') if @mee.image.attached? %>
 </div>
 
 <h2>■ 問題に関するターミナルやコンソールのスクリーンショット</h2>

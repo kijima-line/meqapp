@@ -1,12 +1,17 @@
 <div style="background:skybue;">
   <%= form_with(model: mee, local: true) do |f| %>
     <h2>問題解決フォーマット（精度アップ）</h2>
-タイトル<%= f.text_field :title,required: true %>　日付
-      <%= f.text_field :q_a,required: true %>月
-        <%= f.text_field :q_b,required: true %>日
+    <input id="acd-check10" class="acd-check" type="checkbox"> <label class="acd-label" for="acd-check10">【タイトル】</label>
+    <div class="acd-content">
+      <div class="box1">
+        <p>タイトル<%= f.text_field :title,required: true,class:"box_1" %>　日付
+      <%= f.text_field :q_a,required: true,class:"box_1" %>月
+        <%= f.text_field :q_b,required: true,class:"box_1" %>日</p>
+      </div>
+    </div>
        
         
-    <input id="acd-check1" class="acd-check" type="checkbox"> <label class="acd-label" for="acd-check1">【問題の箇所】</label>
+    <input id="acd-check1" class="acd-check" type="checkbox"> <label class="acd-label" for="acd-check1">【問題の場所】</label>
     <div class="acd-content">
       <div class="box1">
         <%= f.text_area :q_1, placeholder: "（例）最終課題サーバーサイド",class:"q_a" %>
@@ -28,6 +33,8 @@
         <%#= image_tag mee.image.variant(resize: '500x500'), class: 'mee-image' if mee.image.attached? %>
         <%#= f.label :image, '画像' %>
         <%#= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+                <%#= f.label :image, '画像' %>
+        <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
       </div>
     </div>
     <input id="acd-check4" class="acd-check" type="checkbox"> <label class="acd-label" for="acd-check4">■ 問題に関するターミナルやコンソールのスクリーンショット</label>
