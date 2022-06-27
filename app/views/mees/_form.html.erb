@@ -46,6 +46,7 @@
     <input id="acd-check5" class="acd-check" type="checkbox"> <label class="acd-label" for="acd-check5">■ 解決したいこと</label>
     <div class="acd-content">
       <div class="box1">
+      <%#= f.text_area :content, data: { "uk-htmleditor": "{ markdown: true }" } %>
         <%= f.text_area :q_5, placeholder: "（例）クレジットカードを用いた購入機能を実装中。カード情報のトークン生成はできているが、トークン情報がパラメーターとして取れない。",class:"q_a" %>
       </div>
     </div>
