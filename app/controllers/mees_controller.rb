@@ -13,8 +13,8 @@ class MeesController < ApplicationController
       if mee.save
         redirect_to root_path
       else
-        @mees = Mee.all
-        render :new
+      mee = Mee.new(mee_params)
+      render :new
       end
     end
   
@@ -40,7 +40,7 @@ class MeesController < ApplicationController
   
     private
     def mee_params
-      params.require(:mee).permit(:q_a, :q_b, :q_1, :q_2, :q_3, :q_4, :q_5, :q_6, :q_7, :image).merge(user_id: current_user.id)
+      params.permit(:q_a, :q_b, :title, :q_1, :q_2, :q_3, :q_4, :q_5, :q_6, :q_7, :image).merge(user_id: current_user.id)
     end
   end
   

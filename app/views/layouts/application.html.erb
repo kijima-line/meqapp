@@ -4,9 +4,10 @@
     <title>Meq</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%#= render 'layouts/head-uikit' %>
+<meta name=viewport content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-     <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -14,13 +15,15 @@
           <div class="list">
          <%= link_to "ホーム", root_path %>
     <ol>
-        <li> 実装0予定</li>
-        <li><%= link_to "作成する",new_mee_path %></li>
+       <li><%= link_to "作成する",new_mee_path %></li>
         <li>未解決</li>
         <li>解決</li>
         <li>カテゴリー</li>
         <li>カレンダー</li>
         <li>タグ</li>
+        <% if user_signed_in? %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :get %>
+        <%end%>
     </ol>
 </div>
         <article class="main">

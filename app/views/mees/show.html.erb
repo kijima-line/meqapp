@@ -2,7 +2,7 @@
 
   <h2>問題解決フォーマット（精度アップ）</h2>
   
-<%= @mee.q_a%>月<%= @mee.q_b%>日
+<%= @mee.q_a%>月<%= @mee.q_b%>日 タイトル:<%=@mee.title%>
 
 
 
@@ -12,19 +12,20 @@
 
 <h2>【問題の内容】</h2>
 <div class="box1"> 
-<p>■ エラー画面のスクリーンショット
-<br>スクリーンショットを貼る</p>
 <%= @mee.q_2 %></div>
 
-<h2>■ 問題に関するVScodeのファイル全体のスクリーンショット</h2>
+
+ <h2>■ 問題に関するVScodeのファイル全体のスクリーンショット</h2>
 <div class="box1"> 
 スクリーンショットを貼る<%= @mee.q_3 %>
+<%= image_tag @mee.image.variant(resize: '500x500') if @mee.image.attached? %>
 </div>
 
 <h2>■ 問題に関するターミナルやコンソールのスクリーンショット</h2>
 <div class="box1"> 
 スクリーンショットを貼る<%= @mee.q_4 %>
-</div>
+</div> 
+
 
 <h2>■ 解決したいこと</h2>
 <div class="box1"> 
@@ -42,7 +43,6 @@
 <h2>カテゴリー</h2>
 <div class="box1"> 
 <ol>
-<li>実装予定</li>
 <li>未分類</li>
 <li>解決｜未解決</li>
 <li>フロントエンド</li>
@@ -53,4 +53,3 @@
 <h2>タグ</h2>
 <div class="box1"> 
 </div>
- </div>
