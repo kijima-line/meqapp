@@ -17,6 +17,7 @@
 * {
   box-sizing: border-box;
 }
+
 .header {
   display: block;
   width: 100%;
@@ -38,6 +39,7 @@
   position: absolute;
   font-size: 16px;
 }
+
 .list {
   background: linear-gradient(#05fbff, #ffffff);
   width: 25vh;
@@ -59,11 +61,15 @@
   padding: 2%;
   border-radius: 10px;
 }
+
 .point-box {
   position: relative;
-  border: 2px solid #0091ea; /* 枠の太さ・種類・色 */
-  border-radius: 4px; /* 枠の丸み */
-  margin: 1.8em 1em; /* 枠外の余白 */
+  border: 2px solid #0091ea;
+  /* 枠の太さ・種類・色 */
+  border-radius: 4px;
+  /* 枠の丸み */
+  margin: 1.8em 1em;
+  /* 枠外の余白 */
   padding: 5px 15px;
   background-color: aquamarine;
 }
@@ -72,25 +78,47 @@
   position: absolute;
   padding: 0 0.5em;
   left: 20px;
-  top: -13px; /* タイトルの位置を調整 */
-  color: #ffffff; /* タイトルの文字色 */
+  top: -13px;
+  /* タイトルの位置を調整 */
+  color: #ffffff;
+  /* タイトルの文字色 */
   font-weight: bold;
-  font-size: 0.9em; /* タイトルの文字サイズ */
+  font-size: 0.9em;
+  /* タイトルの文字サイズ */
   background-color: #053bfc;
 }
+
 //ここからスマホ表示
 @media (max-width: 1280px) {
   .main {
     text-align: left;
   }
+
   .side {
     display: none;
   }
+
   .list {
     display: none;
   }
 }
 
-.box_1{
+.box_1 {
   font-size: 12px;
+}
+
+.box_2 {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 200px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 16px;
+}
+
+.box1 image {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 200px;
+
 }

@@ -41,7 +41,7 @@ group :development, :test do
   gem 'binding_of_caller'
 
   gem 'hirb'
-
+  gem 'htmlbeautifier'
   # Use test tools
   gem 'factory_bot_rails'
   gem 'faker'
